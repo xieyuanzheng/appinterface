@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>教学资源</title>
+    <style>
+        #container{
+            background-color: #fef0b2;
+            text-align: center;
+            width: 73%;
+            margin: auto;
+        }
+        .picViewer{
+            /* background-color: aqua; */
+            text-align: center;
+            width: 70%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body >
+    <div id="container">
+        <div>
+            <a href="../index.html">回首页</a>
+            <hr>
+            <h3>Unit 7 Activities 教学资源</h3>
+        </div>
+        <div class="picViewer">
+            <div id="page">页码 1/21</div>
+            <table>
+                <tr>
+                    <td id="previous"><img src="../resource/img/Arrow-Left.png" alt="上一页" title="上一页" width="50" style="display: inline-block; vertical-align: middle;"></td>
+                    <td><img id="image-viewer" src="../resource/img/Unit7Activities-庄瑞簪/幻灯片1.jpg" alt="幻灯片" width="800" height="600"></td>
+                    <td id="next"><img src="../resource/img/Arrow-Right.png" alt="下一页" title="下一页" width="50"></td>
+                </tr>
+            </table>
+        </div>
+        <!--#<audio src="../resource/video/拓展阅读10A 录音.mp4" controls="controls"></audio>-->
+        <div>
+            <hr>
+            <a href="../index.html">回首页</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var path = [
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片1.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片2.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片3.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片4.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片5.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片6.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片7.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片8.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片9.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片10.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片11.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片12.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片13.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片14.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片15.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片16.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片17.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片18.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片19.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片20.jpg",
+            "../resource/img/Unit7Activities-庄瑞簪/幻灯片21.jpg"
+        ];
+        var index = 0;
+        document.getElementById("previous").onclick = function() {
+            if (index-- <= 0) {
+                index = path.length - 1;
+            }
+            document.getElementById("page").innerHTML = '页码 ' + (index + 1).toString() + '/21';
+            document.getElementById("image-viewer").setAttribute("src", path[index]);
+        };
+        document.getElementById("next").onclick = function() {
+            if (index++ >= path.length - 1) {
+                index = 0;
+            }
+            document.getElementById("page").innerHTML = '页码 ' + (index + 1).toString() + '/21';
+            document.getElementById("image-viewer").setAttribute("src", path[index]);
+        };
+    </script>
+</body>
+</html>

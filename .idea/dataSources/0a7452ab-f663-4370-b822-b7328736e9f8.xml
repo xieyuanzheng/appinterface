@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="test@47.104.108.184">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="test">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sys"/>
+    <schema id="7" parent="1" name="jeeweb"/>
+    <table id="8" parent="2" name="autoperformance"/>
+    <table id="9" parent="2" name="autotestcase"/>
+    <table id="10" parent="2" name="demand"/>
+    <table id="11" parent="2" name="details"/>
+    <table id="12" parent="2" name="hibernate_sequence"/>
+    <table id="13" parent="2" name="tracking"/>
+    <table id="14" parent="2" name="ufa_dept"/>
+    <table id="15" parent="2" name="ufa_role"/>
+    <table id="16" parent="2" name="ufa_user"/>
+    <column id="17" parent="8" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="18" parent="8" name="name">
+      <Position>2</Position>
+      <Comment>测试用例名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="19" parent="8" name="type">
+      <Position>3</Position>
+      <Comment>用例类型</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="20" parent="8" name="subtype">
+      <Position>4</Position>
+      <Comment>用例子类型</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="21" parent="8" name="param1">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="22" parent="8" name="value1">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="23" parent="8" name="createtime">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="24" parent="8" name="creater">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="25" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="9" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="27" parent="9" name="type">
+      <Position>2</Position>
+      <Comment>用例类型：功能测试function、性能测试performance</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="28" parent="9" name="name">
+      <Position>3</Position>
+      <Comment>测试用例名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="29" parent="9" name="terminal">
+      <Position>4</Position>
+      <Comment>终端类型：PC、android、ios</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="30" parent="9" name="testobject">
+      <Position>5</Position>
+      <Comment>测试对象：UFA、1688、天猫</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="31" parent="9" name="param1">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="32" parent="9" name="value1">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="33" parent="9" name="param2">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="34" parent="9" name="value2">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="35" parent="9" name="param3">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="36" parent="9" name="value3">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="37" parent="9" name="result">
+      <Position>12</Position>
+      <Comment>测试结果：success、fail、block、skip、close</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="38" parent="9" name="valid">
+      <Position>13</Position>
+      <Comment>删除标志位：1正常，0删除</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="39" parent="9" name="executor">
+      <Position>14</Position>
+      <Comment>执行人</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="40" parent="9" name="createtime">
+      <Position>15</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="41" parent="9" name="modifier">
+      <Position>16</Position>
+      <Comment>修改人</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="42" parent="9" name="modifytime">
+      <Position>17</Position>
+      <Comment>修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="43" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="44" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="10" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="10" name="online_time">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="10" name="status">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="48" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="49" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="11" name="description">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="11" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="52" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="53" parent="12" name="next_val">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="54" parent="13" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="55" parent="13" name="number">
+      <Position>2</Position>
+      <Comment>序号</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="56" parent="13" name="date">
+      <Position>3</Position>
+      <Comment>反馈时间</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="57" parent="13" name="feedbackman">
+      <Position>4</Position>
+      <Comment>反馈人</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="58" parent="13" name="feedbackdept">
+      <Position>5</Position>
+      <Comment>反馈人部门</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="59" parent="13" name="feedbacktype">
+      <Position>6</Position>
+      <Comment>反馈方式</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="60" parent="13" name="item">
+      <Position>7</Position>
+      <Comment>涉及端</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="61" parent="13" name="module">
+      <Position>8</Position>
+      <Comment>涉及模块</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="62" parent="13" name="description">
+      <Position>9</Position>
+      <Comment>问题描述</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="63" parent="13" name="reason">
+      <Position>10</Position>
+      <Comment>问题原因</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="64" parent="13" name="followman">
+      <Position>11</Position>
+      <Comment>跟进人</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="65" parent="13" name="followresult">
+      <Position>12</Position>
+      <Comment>跟进结果</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="66" parent="13" name="chandaono">
+      <Position>13</Position>
+      <Comment>禅道单号</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="67" parent="13" name="remark">
+      <Position>14</Position>
+      <Comment>备注</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="68" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="69" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="14" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="71" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="72" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="73" parent="15" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="74" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="75" parent="16" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="76" parent="16" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="77" parent="16" name="telephone">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="78" parent="16" name="number">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="79" parent="16" name="deptid">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="80" parent="16" name="roleid">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="81" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

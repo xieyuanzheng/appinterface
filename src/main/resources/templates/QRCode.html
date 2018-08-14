@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+    <title>扫描二维码</title>
+    <style type="text/css">
+
+        #weixin-tip p{
+            text-align:center;
+            margin-top:10%;
+            padding:0 5%;
+            position:relative;
+        }
+        #weixin-tip .close{
+            color:#fff;
+            padding:5px;
+            font:bold 20px/24px simsun;
+            text-shadow:0 1px 0 #ddd;
+            position:absolute;
+            top:0;
+            left:5%;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var is_weixin = (function(){return navigator.userAgent.toLowerCase().indexOf('micromessenger') !== -1;})();
+        window.onload = function() {
+            var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight; //兼容IOS，不需要的可以去掉
+            var btn = document.getElementById('J_weixin');
+            var tip = document.getElementById('weixin-tip');
+            var close = document.getElementById('close');
+            if (is_weixin) {
+                btn.onclick = function(e) {
+                    tip.style.height = winHeight + 'px'; //兼容IOS弹窗整屏
+                    tip.style.display = 'block';
+                    return false;
+                };
+                close.onclick = function() {
+                    tip.style.display = 'none';
+                };
+            }
+        };
+    </script>
+</head>
+<body>
+<div id="weixin-tip">
+   <p>
+        <span>IOS下载：https://fir.im/UFA</span><br>
+        <span>请扫描下方二维码</span><br>
+        <img alt="微信打开" src="img/appleapp_small.png">
+        <br><br><br>
+        <span>安卓下载：http://www.paison.top:8080/mall-001/downloadapk</span><br>
+       <span>请扫描下方二维码</span><br>
+        <img alt="微信打开" src="img/androidapk_small.png">
+        <span id="close" title="关闭" class="close">X</span>
+    </p>
+</div>
+</body>
+</html>
